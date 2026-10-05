@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Evolution Tree — From Pattern Recognition to Agentic AI</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:#eef3ff;
+  background:radial-gradient(circle at 50% 10%,#20294d 0,#0b1020 45%,#050711 100%);
+  min-height:100vh; overflow-x:hidden;
+}
+.hero{text-align:center;padding:34px 18px 18px}
+.badge{display:inline-block;padding:7px 14px;border:1px solid #6876a8;border-radius:999px;font-size:12px;letter-spacing:2px;color:#b9c7ff}
+h1{font-size:clamp(30px,5vw,60px);margin:15px 0 7px;line-height:1.05}
+h1 span{color:#8ff4d6}
+.subtitle{max-width:850px;margin:auto;color:#aeb9d7;line-height:1.6}
+.tree-wrap{max-width:1200px;margin:20px auto 50px;padding:0 18px}
+.tree{
+  position:relative; min-height:1480px; overflow:hidden; border-radius:34px;
+  background:linear-gradient(180deg,rgba(24,31,58,.72),rgba(8,12,25,.92));
+  border:1px solid #303b62; box-shadow:0 30px 90px #0008;
+}
+svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.stage{
+  position:absolute; transform:translate(-50%,-50%); width:min(310px,42vw);
+  padding:15px 17px; border-radius:18px; background:rgba(12,18,37,.91);
+  border:1px solid #45527e; box-shadow:0 10px 35px #0009; cursor:pointer;
+  transition:.25s; z-index:3;
+}
+.stage:hover{transform:translate(-50%,-50%) scale(1.04);border-color:#8ff4d6;box-shadow:0 0 28px #55e5c055}
+.stage h3{margin:0 0 6px;font-size:17px}
+.stage p{margin:5px 0;color:#aeb9d7;font-size:13px;line-height:1.45}
+.stage .era{font-size:11px;letter-spacing:1px;color:#8ff4d6;text-transform:uppercase}
+.stage .tools{color:#dce4ff;font-size:12px}
+.leaf{
+  position:absolute; transform:translate(-50%,-50%); z-index:4;
+  padding:10px 13px;border-radius:50% 8px 50% 8px;min-width:125px;text-align:center;
+  background:linear-gradient(135deg,#132f39,#183f43);border:1px solid #64e8c5;
+  box-shadow:0 0 20px #48dcb044; cursor:pointer;transition:.25s
+}
+.leaf:hover{transform:translate(-50%,-50%) scale(1.08);background:#16484a}
+.leaf b{display:block;font-size:13px}.leaf small{color:#8ff4d6;font-weight:700}
+.root{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);text-align:center;width:90%}
+.root .trunk{font-size:44px}
+.root h2{margin:3px;font-size:22px}.root p{color:#8e9ab8;margin:4px}
+.legend{max-width:1200px;margin:-25px auto 45px;padding:0 18px}
+.legendbox{padding:20px;border-radius:20px;background:#0d1429;border:1px solid #303b62}
+.legendbox strong{color:#8ff4d6}
+.note{font-size:12px;color:#8792af;line-height:1.6;margin-top:12px}
+@media(max-width:700px){
+ .tree{min-height:1900px}
+ .stage{width:250px}
+ .s1{top:88%;left:50%}.s2{top:76%;left:50%}.s3{top:64%;left:50%}.s4{top:52%;left:50%}
+ .s5{top:40%;left:50%}.s6{top:28%;left:50%}.s7{top:16%;left:50%}.s8{top:7%;left:50%}
+ .l1{top:84%;left:18%}.l2{top:72%;left:82%}.l3{top:60%;left:18%}.l4{top:48%;left:82%}
+ .l5{top:36%;left:18%}.l6{top:24%;left:82%}.l7{top:12%;left:18%}.l8{top:4%;left:82%}
+}
+
+.card-lane{position:absolute;top:4%;bottom:9%;left:50%;width:2px;background:linear-gradient(transparent,#53658e55,#8ff4d655,#53658e55,transparent);z-index:1}
+@media(max-width:700px){.card-lane{left:50%;top:5%;bottom:10%}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="badge">GEN-Y VIEW • 1950s → 2026</div>
+  <h1>The <span>Evolution of AI</span> Tree</h1>
+  <p class="subtitle">AI did not arrive with ChatGPT. Today's Generative and Agentic AI are leaves on a tree whose roots include symbolic reasoning, pattern recognition, perception, machine learning and decades of software engineering.</p>
+</section>
+
+<div class="tree-wrap"><div class="tree">
+<div class="card-lane"></div><svg viewBox="0 0 1200 1480" preserveAspectRatio="none">
+ <path d="M600 1440 C600 1250 570 1110 600 940 C625 790 550 650 600 510 C630 420 600 300 600 120" fill="none" stroke="#806246" stroke-width="34" stroke-linecap="round"/>
+ <path d="M600 1050 C480 940 360 850 210 770 M600 850 C730 750 850 650 1000 590 M600 670 C470 570 390 500 280 430 M600 500 C740 420 820 330 960 260" fill="none" stroke="#806246" stroke-width="16" stroke-linecap="round"/>
+ <path d="M600 1030 C520 930 430 860 330 820 M600 870 C700 790 790 710 900 680 M600 670 C520 590 460 540 380 500 M600 510 C690 450 780 370 850 330" fill="none" stroke="#b07a4d" stroke-width="5" stroke-linecap="round"/>
+</svg>
+
+<div class="stage s1" style="top:91%;left:27%" onclick="alert('Foundation: computers became programmable and researchers began formalizing intelligence as a computational problem.')">
+ <div class="era">1940s–1950s • Roots</div><h3>🧠 Computing + Symbolic AI</h3>
+ <p>Logic, algorithms, search and the question: “Can machines think?”</p>
+ <div class="tools">Software: early Lisp / Lisp machines • Logic programming</div>
+</div>
+<div class="stage s2" style="top:78%;left:73%">
+ <div class="era">1950s–1970s</div><h3>🔎 Pattern Recognition</h3>
+ <p>Machines classify shapes, symbols, speech and signals using engineered features.</p>
+ <div class="tools">Software: Perceptron • early OCR • statistical classifiers</div>
+</div>
+<div class="stage s3" style="top:65%;left:27%">
+ <div class="era">1960s–1980s</div><h3>👁️ Computer Vision + Expert Systems</h3>
+ <p>Perception meets rules: image processing, edges, objects, knowledge bases and inference.</p>
+ <div class="tools">Software: MYCIN • XCON • image-processing toolkits</div>
+</div>
+<div class="stage s4" style="top:52%;left:73%">
+ <div class="era">1980s–2000s</div><h3>📈 Statistical Machine Learning</h3>
+ <p>Instead of coding every rule, systems learn patterns from examples and data.</p>
+ <div class="tools">Software: MATLAB • WEKA • SVM • decision trees • HMMs</div>
+</div>
+<div class="stage s5" style="top:39%;left:27%">
+ <div class="era">2000s–2012</div><h3>🕸️ Neural Networks Return</h3>
+ <p>More data + better hardware + improved training make neural approaches practical.</p>
+ <div class="tools">Software: CUDA • GPUs • early deep-learning frameworks</div>
+</div>
+<div class="stage s6" style="top:27%;left:73%">
+ <div class="era">2012–2017</div><h3>🔥 Deep Learning</h3>
+ <p>CNNs transform vision; representation learning reduces dependence on hand-crafted features.</p>
+ <div class="tools">Software: TensorFlow • Caffe • PyTorch</div>
+</div>
+<div class="stage s7" style="top:15%;left:27%">
+ <div class="era">2017–2021</div><h3>⚡ Transformers + Foundation Models</h3>
+ <p>Attention enables powerful language and multimodal representation learning at scale.</p>
+ <div class="tools">Software: BERT • GPT family • Hugging Face</div>
+</div>
+<div class="stage s8" style="top:6%;left:73%">
+ <div class="era">2022–2026</div><h3>✨ Generative → Agentic AI</h3>
+ <p>Models generate content, use tools, remember context, plan and orchestrate multi-step work.</p>
+ <div class="tools">Software: ChatGPT • Gemini • Claude • Agents SDK • MCP</div>
+</div>
+
+<!-- leaves: illustrative contribution shares, not scientific percentages -->
+<div class="leaf l1" style="top:94%;left:8%"><b>Logic & Search</b><small>≈10%</small></div>
+<div class="leaf l2" style="top:81%;left:92%"><b>Pattern Recognition</b><small>≈10%</small></div>
+<div class="leaf l3" style="top:68%;left:8%"><b>Computer Vision</b><small>≈12%</small></div>
+<div class="leaf l4" style="top:55%;left:92%"><b>Machine Learning</b><small>≈15%</small></div>
+<div class="leaf l5" style="top:42%;left:8%"><b>Neural Nets</b><small>≈12%</small></div>
+<div class="leaf l6" style="top:29%;left:92%"><b>Deep Learning</b><small>≈16%</small></div>
+<div class="leaf l7" style="top:17%;left:8%"><b>Transformers</b><small>≈15%</small></div>
+<div class="leaf l8" style="top:8%;left:92%"><b>GenAI + Agents</b><small>≈10%</small></div>
+
+<div class="root"><div class="trunk">🌳</div><h2>Today's “Complete AI” is the canopy — not the whole tree.</h2><p>Every leaf carries decades of ideas, algorithms, hardware and software beneath it.</p></div>
+</div></div>
+
+<div class="legend"><div class="legendbox">
+<strong>🌿 About the percentages</strong>
+<p>These percentages are <b>illustrative visual weights</b>, not a peer-reviewed measurement of AI's historical contribution. They are designed to communicate how the major eras collectively built today's AI rather than claim that one field literally contributed a fixed percentage.</p>
+<p class="note">Tip: Click any major stage to explore its role. On mobile, the tree becomes a vertical timeline.</p>
+</div></div>
+</body>
+</html>
