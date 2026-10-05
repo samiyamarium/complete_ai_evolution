@@ -7,80 +7,81 @@
 <style>
 *{box-sizing:border-box}
 body{
-  margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:#eef3ff;
-  background:radial-gradient(circle at 50% 10%,#20294d 0,#0b1020 45%,#050711 100%);
+  margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; color:#0d3b2e;
+  background:#ffffff;
   min-height:100vh; overflow-x:hidden;
 }
 .hero{text-align:center;padding:34px 18px 18px}
-.badge{display:inline-block;padding:7px 14px;border:1px solid #6876a8;border-radius:999px;font-size:12px;letter-spacing:2px;color:#b9c7ff}
-h1{font-size:clamp(30px,5vw,60px);margin:15px 0 7px;line-height:1.05}
-h1 span{color:#8ff4d6}
-.subtitle{max-width:850px;margin:auto;color:#aeb9d7;line-height:1.6}
+.badge{display:inline-block;padding:7px 14px;border:1px solid #10b981;border-radius:999px;font-size:12px;letter-spacing:2px;color:#047857;background:#ecfdf5;font-weight:600}
+h1{font-size:clamp(30px,5vw,60px);margin:15px 0 7px;line-height:1.05;color:#065f46}
+h1 span{color:#10b981}
+.subtitle{max-width:850px;margin:auto;color:#047857;line-height:1.6;font-weight:400}
 .tree-wrap{max-width:1200px;margin:20px auto 50px;padding:0 18px}
 .tree{
   position:relative; min-height:1480px; overflow:hidden; border-radius:34px;
-  background:linear-gradient(180deg,rgba(24,31,58,.72),rgba(8,12,25,.92));
-  border:1px solid #303b62; box-shadow:0 30px 90px #0008;
+  background:linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+  border:2px solid #a7f3d0; box-shadow:0 10px 40px rgba(16, 185, 129, 0.08);
 }
 svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .stage{
   position:absolute; transform:translate(-50%,-50%); width:min(310px,42vw);
-  padding:15px 17px; border-radius:18px; background:rgba(12,18,37,.91);
-  border:1px solid #45527e; box-shadow:0 10px 35px #0009; cursor:pointer;
+  padding:15px 17px; border-radius:18px; background:#ffffff;
+  border:2px solid #34d399; box-shadow:0 8px 24px rgba(6, 95, 70, 0.08); cursor:pointer;
   transition:.25s; z-index:3;
 }
-.stage:hover{transform:translate(-50%,-50%) scale(1.04);border-color:#8ff4d6;box-shadow:0 0 28px #55e5c055}
-.stage h3{margin:0 0 6px;font-size:17px}
-.stage p{margin:5px 0;color:#aeb9d7;font-size:13px;line-height:1.45}
-.stage .era{font-size:11px;letter-spacing:1px;color:#8ff4d6;text-transform:uppercase}
-.stage .tools{color:#dce4ff;font-size:12px;margin-top:6px}
+.stage:hover{transform:translate(-50%,-50%) scale(1.04);border-color:#059669;box-shadow:0 0 24px rgba(16, 185, 129, 0.25)}
+.stage h3{margin:0 0 6px;font-size:17px;color:#065f46}
+.stage p{margin:5px 0;color:#047857;font-size:13px;line-height:1.45}
+.stage .era{font-size:11px;letter-spacing:1px;color:#059669;text-transform:uppercase;font-weight:700}
+.stage .tools{color:#065f46;font-size:12px;margin-top:6px}
 
 .leaf{
   position:absolute; transform:translate(-50%,-50%); z-index:4;
   padding:10px 13px;border-radius:50% 8px 50% 8px;min-width:125px;text-align:center;
-  background:linear-gradient(135deg,#132f39,#183f43);border:1px solid #64e8c5;
-  box-shadow:0 0 20px #48dcb044; cursor:pointer;transition:.25s
+  background:linear-gradient(135deg, #d1fae5, #a7f3d0);border:1.5px solid #10b981;
+  box-shadow:0 4px 15px rgba(16, 185, 129, 0.15); cursor:pointer;transition:.25s
 }
-.leaf:hover{transform:translate(-50%,-50%) scale(1.08);background:#16484a}
-.leaf b{display:block;font-size:13px}.leaf small{color:#8ff4d6;font-weight:700}
+.leaf:hover{transform:translate(-50%,-50%) scale(1.08);background:#6ee7b7}
+.leaf b{display:block;font-size:13px;color:#065f46}.leaf small{color:#047857;font-weight:700}
 
 .root{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);text-align:center;width:90%}
 .root .trunk{font-size:44px}
-.root h2{margin:3px;font-size:22px}.root p{color:#8e9ab8;margin:4px}
+.root h2{margin:3px;font-size:22px;color:#065f46}.root p{color:#047857;margin:4px}
 
 .legend{max-width:1200px;margin:-25px auto 45px;padding:0 18px}
-.legendbox{padding:20px;border-radius:20px;background:#0d1429;border:1px solid #303b62}
-.legendbox strong{color:#8ff4d6}
-.note{font-size:12px;color:#8792af;line-height:1.6;margin-top:12px}
+.legendbox{padding:20px;border-radius:20px;background:#f0fdf4;border:1.5px solid #a7f3d0}
+.legendbox strong{color:#065f46}
+.legendbox p{color:#047857}
+.note{font-size:12px;color:#059669;line-height:1.6;margin-top:12px}
 
-.card-lane{position:absolute;top:4%;bottom:9%;left:50%;width:4px;transform:translateX(-50%);background:linear-gradient(transparent,#53658e55,#8ff4d688,#53658e55,transparent);z-index:1}
+.card-lane{position:absolute;top:4%;bottom:9%;left:50%;width:4px;transform:translateX(-50%);background:linear-gradient(transparent,#a7f3d0,#10b981,#a7f3d0,transparent);z-index:1}
 
 /* Modal Popup Styles */
 .modal-overlay{
-  position:fixed; inset:0; background:rgba(3, 6, 18, 0.82);
+  position:fixed; inset:0; background:rgba(6, 95, 70, 0.3);
   display:none; align-items:center; justify-content:center;
-  z-index:100; backdrop-filter:blur(8px); padding:20px;
+  z-index:100; backdrop-filter:blur(6px); padding:20px;
 }
 .modal-overlay.active{display:flex}
 .modal-card{
-  background:linear-gradient(145deg, #121c38, #0a0f24);
-  border:1px solid #8ff4d6; border-radius:24px;
+  background:#ffffff;
+  border:2px solid #10b981; border-radius:24px;
   width:100%; max-width:520px; padding:28px;
-  box-shadow:0 0 45px rgba(143, 244, 214, 0.25);
+  box-shadow:0 20px 50px rgba(6, 95, 70, 0.15);
   position:relative; animation:modalPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 @keyframes modalPop{from{transform:scale(0.85);opacity:0}to{transform:scale(1);opacity:1}}
 .modal-close{
   position:absolute; top:16px; right:18px; background:none; border:none;
-  color:#aeb9d7; font-size:24px; cursor:pointer; line-height:1;
+  color:#047857; font-size:24px; cursor:pointer; line-height:1;
 }
-.modal-close:hover{color:#8ff4d6}
-.modal-era{font-size:12px; letter-spacing:1.5px; color:#8ff4d6; text-transform:uppercase; margin-bottom:6px}
-.modal-title{font-size:24px; margin:0 0 14px; color:#ffffff; font-weight:700}
-.modal-hook{font-size:15px; color:#e0e8ff; line-height:1.5; margin-bottom:16px; font-weight:500; border-left:3px solid #8ff4d6; padding-left:12px}
-.modal-bullets{margin:0 0 18px; padding-left:20px; color:#aeb9d7; font-size:13.5px; line-height:1.6}
+.modal-close:hover{color:#065f46}
+.modal-era{font-size:12px; letter-spacing:1.5px; color:#059669; text-transform:uppercase; margin-bottom:6px; font-weight:700}
+.modal-title{font-size:24px; margin:0 0 14px; color:#065f46; font-weight:700}
+.modal-hook{font-size:15px; color:#047857; line-height:1.5; margin-bottom:16px; font-weight:500; border-left:3px solid #10b981; padding-left:12px}
+.modal-bullets{margin:0 0 18px; padding-left:20px; color:#065f46; font-size:13.5px; line-height:1.6}
 .modal-bullets li{margin-bottom:6px}
-.modal-tag{display:inline-block; background:rgba(143,244,214,0.12); color:#8ff4d6; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:600}
+.modal-tag{display:inline-block; background:#ecfdf5; color:#047857; padding:6px 12px; border:1px solid #a7f3d0; border-radius:8px; font-size:12px; font-weight:600}
 
 @media(max-width:700px){
   .tree{min-height:1900px}
@@ -105,11 +106,11 @@ svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 <div class="tree">
 <div class="card-lane"></div>
 <svg viewBox="0 0 1200 1480" preserveAspectRatio="none">
-  <!-- Straightened trunk to ensure perfect background alignment with vertical lane -->
-  <path d="M600 1440 L600 120" fill="none" stroke="#806246" stroke-width="34" stroke-linecap="round"/>
+  <!-- Straight trunk -->
+  <path d="M600 1440 L600 120" fill="none" stroke="#a7f3d0" stroke-width="34" stroke-linecap="round"/>
   <!-- Branch structures -->
-  <path d="M600 1050 C480 940 360 850 210 770 M600 850 C730 750 850 650 1000 590 M600 670 C470 570 390 500 280 430 M600 500 C740 420 820 330 960 260" fill="none" stroke="#806246" stroke-width="16" stroke-linecap="round"/>
-  <path d="M600 1030 C520 930 430 860 330 820 M600 870 C700 790 790 710 900 680 M600 670 C520 590 460 540 380 500 M600 510 C690 450 780 370 850 330" fill="none" stroke="#b07a4d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M600 1050 C480 940 360 850 210 770 M600 850 C730 750 850 650 1000 590 M600 670 C470 570 390 500 280 430 M600 500 C740 420 820 330 960 260" fill="none" stroke="#a7f3d0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M600 1030 C520 930 430 860 330 820 M600 870 C700 790 790 710 900 680 M600 670 C520 590 460 540 380 500 M600 510 C690 450 780 370 850 330" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round"/>
 </svg>
 
 <div class="stage s1" style="top:91%;left:27%" onclick="openModal('s1')">
